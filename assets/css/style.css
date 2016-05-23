@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid;
+}
+.navbar-nav {
+    float: right;
+}
+@media (min-width: 768px){
+    .navbar-nav>li {
+        border-left: 1px solid;
+        min-width: 100px;
+        /*height: 50px;*/
+    }
+}
+.navbar-default {
+    background-color: white;
+    border-color: black;
+}
+.navbar-brand {
+    padding-left: 25px;
+}
+.navbar-default .navbar-brand {
+    color: black;
+    font-size: 30px;
+}
+.navbar-default .navbar-brand:hover {
+    color: black;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    font-weight: bold;
+    background-color: white;
+    color: black;
+}
+.box {
+    padding: 10px 10px;
+    border-bottom: 1px solid;
+    color: black;
+    background-color: white;
+}
+.box:last-of-type {
+    border-bottom: none;
+}

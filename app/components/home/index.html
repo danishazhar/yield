@@ -1,0 +1,83 @@
+
+
+
+<div class="box col-xs-12">
+	<form role="form">
+		<div class="form-group col-sm-5">
+			<label>Select City</label>
+			<select class="form-control" ng-model="selectedCity" ng-options="x as x.label for x in cities track by x.id" ng-change="getWeatherData()">
+			</select>
+		</div>
+	</form>
+</div>
+<div class="box col-xs-12">
+	<div class="col-xs-12 col-sm-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">Total Rainfall : {{totalRainFall | number:2}}</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-8 col-md-6">
+		<div class="panel panel-success">
+			<div class="panel-heading">Temperature</div>
+			<div class="panel-body">
+				<div ng-repeat = "x in weatherData.data.list">
+					<p><b>{{x.dt * 1000 | date:'mediumDate'}}</b>:
+						MinTemp : {{x.temp.min}} - MaxTemp : {{x.temp.max}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6">
+		<div class="panel panel-default">
+			<div class="panel-heading">Rainfall</div>
+			<div class="panel-body">
+				<div ng-repeat = "x in weatherData.data.list">
+					<p><b>{{x.dt * 1000 | date:'mediumDate'}}</b> : {{x.rain}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6">
+		<div class="panel panel-info">
+			<div class="panel-heading">Humidity</div>
+			<div class="panel-body">
+				<div ng-repeat = "x in weatherData.data.list">
+					<p><b>{{x.dt * 1000 | date:'mediumDate'}}</b> : {{x.humidity}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-6">
+		<div class="panel panel-warning">
+			<div class="panel-heading">Air Pressure</div>
+			<div class="panel-body">
+				<div ng-repeat = "x in weatherData.data.list">
+					<p><b>{{x.dt * 1000 | date:'mediumDate'}}</b> : {{x.pressure}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--<div class="col-xs-6 col-sm-4 panel panel-success">-->
+		<!--<div class="panel-heading">Temperature</div>-->
+		<!--<div class="panel-body">-->
+			<!--<h4>Min Temperature</h4>-->
+			<!--<p>{{minTemperature}}</p>-->
+			<!--<h4>Max Temperature</h4>-->
+			<!--<p>{{maxTemperature}}</p>-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--<div class="col-xs-6 col-sm-4 panel panel-info">-->
+		<!--<div class="panel-heading">Humidity</div>-->
+		<!--<div class="panel-body">-->
+			<!--<p>{{humidity}}</p>-->
+		<!--</div>-->
+	<!--</div>-->
+	<!--<div class="col-xs-6 col-sm-4 panel panel-warning">-->
+		<!--<div class="panel-heading">Air pressure</div>-->
+		<!--<div class="panel-body">-->
+			<!--<p>{{airPressure}}</p>-->
+		<!--</div>-->
+	<!--</div>-->
+</div>
+

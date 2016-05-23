@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html ng-app="yield">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="col-md-10 col-md-offset-1"/>
+        <top-bar></top-bar>
+        <div ng-view></div>
+    </div>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="/assets/js/angular-route.js"></script>
+<script src="/app/shared/modules/ui.module.js"></script>
+<script src="/app/shared/modules/app.module.js"></script>
+<script src="/app/shared/directives/topBar.directive.js"></script>
+<script src="/app/components/home/indexCtrl.js"></script>
+</html>
